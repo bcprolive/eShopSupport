@@ -1,7 +1,11 @@
 ﻿using Microsoft.Extensions.AI;
 using SmartComponents.LocalEmbeddings;
+using CommunityToolkit.Aspire.OllamaSharp;
+using Microsoft.Extensions.AI;
+//using Microsoft.Extensions.AI.Embeddings; // Embedding<T>
 
 namespace eShopSupport.DataGenerator.Generators;
+//namespace SmartComponents.LocalEmbeddings;
 
 public class LocalTextEmbeddingGenerator : IEmbeddingGenerator<string, Embedding<float>>
 {
