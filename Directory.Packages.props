@@ -20,10 +20,11 @@
     <PackageVersion Include="Aspire.StackExchange.Redis" Version="$(AspireVersion)" />
     <PackageVersion Include="Azure.Identity" Version="1.12.0" />
     <PackageVersion Include="Azure.AI.OpenAI" Version="2.1.0-beta.1" />
+    <PackageVersion Include="CommunityToolkit.Aspire.OllamaSharp" Version="9.6.0" />
     <PackageVersion Include="IdentityModel" Version="7.0.0" />
     <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
     <PackageVersion Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="8.0.10" />
-    <PackageVersion Include="Microsoft.Extensions.AI" Version="$(MicrosoftExtensionsAiVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.AI" Version="9.5.0" />
     <PackageVersion Include="Microsoft.Extensions.AI.Evaluation" Version="$(MicrosoftExtensionsAiEvaluationVersion)" />
     <PackageVersion Include="Microsoft.Extensions.AI.Evaluation.Quality" Version="$(MicrosoftExtensionsAiEvaluationVersion)" />
     <PackageVersion Include="Microsoft.Extensions.AI.Evaluation.Reporting" Version="$(MicrosoftExtensionsAiEvaluationVersion)" />

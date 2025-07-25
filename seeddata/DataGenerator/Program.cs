@@ -1,12 +1,25 @@
-﻿using eShopSupport.DataGenerator;
+﻿//using eShopSupport.DataGenerator;
 using eShopSupport.DataGenerator.Generators;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
+using CommunityToolkit.Aspire.OllamaSharp;   // ⬅ only namespace you need
 
 var builder = Host.CreateApplicationBuilder(args);
-builder.Configuration.AddJsonFile("appsettings.json");
+builder.Configuration.AddJsonFile("appsettings.json", optional: true);
 builder.Configuration.AddJsonFile("appsettings.Local.json", optional: true);
-builder.AddOpenAIChatCompletion("chatcompletion");
+
+
+//builder.AddOpenAIChatCompletion("chatcompletion");
+
+//builder.AddOllamaApiClient("ollama", opts =>
+//{
+//    opts.Endpoint = new Uri("http://localhost:11434/");
+//    opts.Model = "llama3.1";
+//});
+
+var ollama = builder.AddOllamaApiClient("ollama");
+ollama.AddEmbeddingGenerator();   // IEmbeddingGenerator<string,Embedding<float>>
+ollama.AddChatClient();           // IChatClient   <-- call AFTER or in a separate line
 
 var services = builder.Build().Services;
 
